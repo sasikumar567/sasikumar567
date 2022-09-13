@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+Int a,b,*p,*q;
+printf("enter two numbers");
+scanf("℅d%d",&a,&b);
+p=&a;
+q=&b;
+Printf("sum=℅d",*p+*q);
+}
