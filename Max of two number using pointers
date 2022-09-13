@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+Int a,b,*p,*q;
+printf("enter two numbers");
+scanf("℅d%d",&a,&b);
+p=&a;
+q=&b;
+if(*p>*q)
+{
+printf(''%d is greatest'',*p);
+}
+else
+{
+printf(''%d is greatest'',*q);
+}
+}
