@@ -1,0 +1,30 @@
+#include<stdio.h>
+int rois(int a,int b)
+{
+float c=a*b*0.12;
+return c;
+}
+int roi(int a,int b)
+{
+float c=a*b*0.10;
+return c;
+}
+int main()
+{
+int a,b;
+char d;
+printf("Enter principle amount:");
+scanf("%d",&a);
+printf("No of years:");
+scanf("%d",&b);
+printf("Is customer senior citizen(y/n)");
+scanf("%c",&d);
+if(d=='Y' or d=='y')
+{
+printf("Rate of interest=%.2f",rois(a,b));
+}
+else
+{
+printf("Rate of interest=%.2f",roi(a,b));
+}
+}
