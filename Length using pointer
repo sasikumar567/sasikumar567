@@ -1,0 +1,19 @@
+#include<stdio.h>
+ int strln(char*p)
+ {
+ 	int a=0;
+ 	while(*p!='\0')
+ 	{
+ 		a++;
+ 		p++;
+	}
+	return a;
+ }
+ int main()
+ {
+ 	char str[100];
+ 	int l;
+ 	printf("enter a string: ");
+ 	scanf("%s",str);
+ 	printf("lenght= %d",strln(str));
+}
