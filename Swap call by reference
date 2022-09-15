@@ -1,0 +1,16 @@
+
+#include<stdio.h>
+int add(int *a,int *b)
+{
+	int sum=*a;
+  *a=*b;
+	*b=sum;
+}
+int main()
+{
+	int a,b;
+	printf("enter two values: \n");
+	scanf("%d%d",&a,&b);
+	add(&a,&b);
+	printf("%d    %d ",a,b);
+}
