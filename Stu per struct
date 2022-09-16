@@ -1,0 +1,38 @@
+#include<Stdio.h>
+#include<string.h>
+struct stu
+{
+	int r;
+	char n[20];
+	float m[10];
+}s[100];
+int main()
+{
+	int i;
+	float ave=0;
+	printf("Enter number of students: ");
+	scanf("%d",&i);
+	for(int j=0;j<i;j++)
+	{
+		printf("Enter student%d details:\n",j+1);
+		printf("Roll number : ");
+		scanf("%d",&s[j].r);
+		printf("Name : ");
+		scanf("%s",s[j].n);
+		printf("Marks : ");
+		scanf("%f%f%f",&s[j].m[0],&s[j].m[1],&s[j].m[2]);
+	}
+	printf("\n\nStudent details\n");
+	for(int j=0;j<i;j++)
+	{
+		printf("\nStudent %d :\n",j+1);
+		printf("\n%s\n",s[j].n);
+		printf("\nRoll number : %d\n",s[j].r);
+		for(int l=0;l<3;l++)
+		{
+			printf("\nMark %d : %.2f",l+1,s[j].m[l]);
+			ave=ave+s[j].m[l];
+		}
+		printf("\npercentage : %.2f",ave/3);
+	}
+}
