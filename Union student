@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<string.h>
+struct stu
+{
+	int r;
+	char n[20];
+	float m;
+}s[100];
+int main()
+{
+	int *p,i;
+	printf("Enter number of students: ");
+	scanf("%d",&i);
+	p=&i;
+	for(int j=0;j<*p;j++)
+	{
+		printf("Enter student%d details:\n",j+1);
+		printf("Roll number : ");
+		scanf("%d",&s[j].r);
+		printf("Name : ");
+		scanf("%s",s[j].n);
+		printf("Marks : ");
+		scanf("%f",&s[j].m);
+	}
+	printf("\n\nStudent details\n");
+	for(int j=0;j<*p;j++)
+	{
+		printf("Student %d :\n",j+1);
+		printf("%s\n",s[j].n);
+		printf("Roll number : %d\n",s[j].r);
+		printf("Marks : %.2f\n",s[j].m);
+	}
+}
