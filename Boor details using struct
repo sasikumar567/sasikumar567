@@ -1,0 +1,44 @@
+#include<Stdio.h>
+#include<string.h>
+#include<Stdlib.h>
+struct books
+{
+	int r;
+	char n[20],an[30],sub[30];
+}s[100];
+int main()
+{
+	int i;
+	char str[100];
+	float ave=0;
+	printf("Enter number of books: ");
+	scanf("%d",&i);
+	for(int j=0;j<i;j++)
+	{
+		printf("Enter book%d details:\n",j+1);
+		printf("book number : ");
+		scanf("%d",&s[j].r);
+		printf("subject : ");
+		fgets(str,20);
+		strcpy(str,s[j].sub);
+		printf("Book Name : ");
+		fgets(str,20,stdlin);
+		strcpy(str,s[j].n);
+	
+	
+		printf("Author Name : ");
+		fgets(str,20,stdlin);
+		strcpy(str,s[j].an);		
+	
+	}
+	printf("\n\nStudent details\n");
+	for(int j=0;j<i;j++)
+	{
+		printf("\nBook %d :",j+1);
+		printf("\n%s",s[j].n);
+		printf("\nBook number : %d",s[j].r);
+		printf("\nAuthor Name : %s",s[j].n);
+		printf("\nsubject : %s ",s[j].sub);
+	
+	}
+}
