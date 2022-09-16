@@ -1,0 +1,31 @@
+
+#include<stdio.h>
+int main()
+{
+	float age;
+	int a;
+	printf("Enter your age : ");
+	if(scanf("%f",&age))
+	{
+		a=age;
+		if(a>=0 and a==age)
+		{
+			if(a>=18)
+			{
+				printf("You are eligible for voting");
+			}
+			else
+			{
+				printf("you are aloowed to vote after %d years",18-a);
+			}
+		}
+		else
+		{
+			printf("invalid age");
+		}
+	}
+	else
+	{
+		printf("invalid\nenter integer");
+	}
+}
