@@ -1,0 +1,34 @@
+
+#include<Stdio.h>
+int main()
+{
+	int r,c;
+	char a;
+	float ro,co;
+	printf("Enter symbol : ");
+	scanf("%c",&a);
+	printf("Enter row size : ");
+	scanf("%f",&ro);
+	printf("Enter coloumn size : ");
+	scanf("%f",&co);
+	r=ro;
+	c=co;
+	if(r==ro and c==co)
+	{
+		for(int i=1;i<=r;i++)
+		{
+			for(int j=1;j<=c;j++)
+			{
+				printf("%c",a);
+			}
+			printf("\n");
+		}
+	}
+	else
+	{
+		if(r==ro)
+		{printf("invalid coloumn");}
+		else
+		{printf("invalid row");}
+	}
+}
